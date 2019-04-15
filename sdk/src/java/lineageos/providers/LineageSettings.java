@@ -1,6 +1,5 @@
 /**
- * Copyright (C) 2015-2016 The CyanogenMod Project
- * Copyright (C) 2017-2019 The LineageOS Project
+ * Copyright (c) 2015, The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -3012,47 +3011,6 @@ public final class LineageSettings {
          */
         public static final String LOCK_SCREEN_WEATHER_ENABLED = "lock_screen_weather_enabled";
 
-        /**
-         * Network traffic indicator mode
-         * 0 = Don't show network traffic indicator
-         * 1 = Display up-stream traffic only
-         * 2 = Display down-stream traffic only
-         * 3 = Display both up- and down-stream traffic
-         * @hide
-         */
-        public static final String NETWORK_TRAFFIC_MODE = "network_traffic_mode";
-
-        /** @hide */
-        public static final Validator NETWORK_TRAFFIC_MODE_VALIDATOR =
-                new InclusiveIntegerRangeValidator(0, 3);
-
-        /**
-         * Whether or not to hide the network traffic indicator when there is no activity
-         * @hide
-         */
-        public static final String NETWORK_TRAFFIC_AUTOHIDE = "network_traffic_autohide";
-
-        /** @hide */
-        public static final Validator NETWORK_TRAFFIC_AUTOHIDE_VALIDATOR = sBooleanValidator;
-
-        /**
-         * Measurement unit preference for network traffic
-         * @hide
-         */
-        public static final String NETWORK_TRAFFIC_UNITS = "network_traffic_units";
-
-        /** @hide */
-        public static final Validator NETWORK_TRAFFIC_UNITS_VALIDATOR =
-                new InclusiveIntegerRangeValidator(0, 3);
-
-        /**
-         * Whether or not to show measurement units in the network traffic indiciator
-         * @hide
-         */
-        public static final String NETWORK_TRAFFIC_SHOW_UNITS = "network_traffic_show_units";
-
-        /** @hide */
-        public static final Validator NETWORK_TRAFFIC_SHOW_UNITS_VALIDATOR = sBooleanValidator;
 
         /**
          * Enable displaying the Trust service's notifications
@@ -3197,10 +3155,6 @@ public final class LineageSettings {
         static {
             VALIDATORS.put(PROTECTED_COMPONENTS, PROTECTED_COMPONENTS_VALIDATOR);
             VALIDATORS.put(PROTECTED_COMPONENT_MANAGERS, PROTECTED_COMPONENTS_MANAGER_VALIDATOR);
-            VALIDATORS.put(NETWORK_TRAFFIC_MODE, NETWORK_TRAFFIC_MODE_VALIDATOR);
-            VALIDATORS.put(NETWORK_TRAFFIC_AUTOHIDE, NETWORK_TRAFFIC_AUTOHIDE_VALIDATOR);
-            VALIDATORS.put(NETWORK_TRAFFIC_UNITS, NETWORK_TRAFFIC_UNITS_VALIDATOR);
-            VALIDATORS.put(NETWORK_TRAFFIC_SHOW_UNITS, NETWORK_TRAFFIC_SHOW_UNITS_VALIDATOR);
             VALIDATORS.put(TRUST_NOTIFICATIONS, TRUST_NOTIFICATIONS_VALIDATOR);
             VALIDATORS.put(TRUST_RESTRICT_USB_KEYGUARD, TRUST_RESTRICT_USB_KEYGUARD_VALIDATOR);
             VALIDATORS.put(TRUST_WARNINGS, TRUST_WARNINGS_VALIDATOR);
